@@ -9,7 +9,7 @@ namespace throttled_transport {
     Throttler::Throttler() {
         initialized = false;
         throttle_mode_ = THROTTLE_BY_FREQUENCY;
-        max_freq_ = 0;
+        max_freq_ = 1;
         max_bw_ = 0;
         used_bytes_ = 0;
         message_count_ = 0;
@@ -29,7 +29,7 @@ namespace throttled_transport {
             throttle_mode_ = THROTTLE_BY_BANDWIDTH;
         }
 
-        nh.param("throttled_transport/max_frequency",max_freq_,0.0);
+        nh.param("throttled_transport/max_frequency",max_freq_,1.0);
         nh.param("throttled_transport/max_bandwidth",max_bw_,0.0);
 
         // TODO: create a service to configure this parameter ?

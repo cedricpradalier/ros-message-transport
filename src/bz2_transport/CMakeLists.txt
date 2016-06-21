@@ -115,11 +115,11 @@ add_dependencies(bz2_test_manifest bz2_transport_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(bz2_transport
-    ${catkin_LIBRARIES} ${BZip2_LIBRARIES}
+    ${catkin_LIBRARIES} ${BZIP2_LIBRARIES}
 )
 
 target_link_libraries(bz2_test_manifest bz2_transport
-    ${catkin_LIBRARIES} ${BZip2_LIBRARIES}
+    ${catkin_LIBRARIES} ${BZIP2_LIBRARIES}
 )
 
 target_link_libraries(bz2_instantiate bz2_transport

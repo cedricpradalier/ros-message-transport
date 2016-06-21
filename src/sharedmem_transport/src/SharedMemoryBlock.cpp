@@ -7,7 +7,7 @@ namespace sharedmem_transport {
     shm_handle SharedMemoryBlock::connectBlock(boost::interprocess::managed_shared_memory & segment, uint32_t handle) {
         assert(handle < ROSSharedMemoryNumBlock);
         std::pair<uint8_t *, std::size_t> ret = segment.find<uint8_t>(descriptors[handle].name_);
-        ROS_DEBUG("Connect block %d: handle %p size %d",handle,ret.first,ret.second);
+        ROS_DEBUG("Connect block %d: handle %p size %d",(int)handle,ret.first,(int)ret.second);
         assert(ret.second >= descriptors[handle].size_);
         return shm_handle(handle,descriptors[handle].resize_count_,ret.first);
     }

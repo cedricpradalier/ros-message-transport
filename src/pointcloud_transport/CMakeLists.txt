@@ -107,14 +107,15 @@ include_directories(
 ## Declare a cpp library
 add_library(pointcloud_transport
   src/manifest.cpp
+  src/decimated_publisher.cpp
 )
 
 ## Declare a cpp executable
-# add_executable(string_transport_node src/string_transport_node.cpp)
+# add_executable(pointcloud_transport_node src/pointcloud_transport_node.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(string_transport_node string_transport_generate_messages_cpp)
+# add_dependencies(pointcloud_transport_node pointcloud_transport_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(pointcloud_transport
@@ -122,13 +123,13 @@ target_link_libraries(pointcloud_transport
 )
 
 add_executable(pointcloud_list_transports src/list_transports.cpp)
-target_link_libraries(pointcloud_list_transports string_transport)
+target_link_libraries(pointcloud_list_transports pointcloud_transport)
 
 add_executable(pointcloud_test_publisher test/publisher.cpp)
-target_link_libraries(pointcloud_test_publisher string_transport ${LOG4CXX_LIBRARY})
+target_link_libraries(pointcloud_test_publisher pointcloud_transport ${LOG4CXX_LIBRARY})
 
 add_executable(pointcloud_test_receiver test/receiver.cpp)
-target_link_libraries(pointcloud_test_receiver string_transport ${LOG4CXX_LIBRARY})
+target_link_libraries(pointcloud_test_receiver pointcloud_transport ${LOG4CXX_LIBRARY})
 
 
 

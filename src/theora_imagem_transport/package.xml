@@ -60,6 +60,7 @@
     <!-- <metapackage/> -->
 
     <!-- Other tools can request additional information be placed here -->
+      <imagem_transport plugin="${prefix}/compressed_plugins.xml" />
 
   </export>
 </package>

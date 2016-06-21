@@ -58,6 +58,7 @@
     <!-- <metapackage/> -->
 
     <!-- Other tools can request additional information be placed here -->
+      <pointcloud_transport plugin="${prefix}/default_plugins.xml" />
 
   </export>
 </package>

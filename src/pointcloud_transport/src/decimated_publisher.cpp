@@ -1,4 +1,4 @@
-#include "pointcloud_transport_base/decimated_publisher.h"
+#include "pointcloud_transport/decimated_publisher.h"
 
 namespace decimated_transport {
 

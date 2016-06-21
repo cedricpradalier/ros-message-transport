@@ -3,7 +3,7 @@
 <library path="lib/libpointcloud_transport">
     
 
-  <class name="pointcloud_transport/decimated_pub_pc" 
+  <class name="pointcloud_transport/decimated_pc_pub" 
 		type="decimated_transport::DecimatedPublisher" 
 		base_class_type="message_transport::PublisherPlugin<sensor_msgs::PointCloud>">
     <description>
@@ -11,7 +11,7 @@
     </description>
   </class>
 
-  <class name="pointcloud_transport/decimated_sub_pc" 
+  <class name="pointcloud_transport/decimated_pc_sub" 
 		type="decimated_transport::DecimatedSubscriber" 
 		base_class_type="message_transport::SubscriberPlugin<sensor_msgs::PointCloud>">
     <description>
